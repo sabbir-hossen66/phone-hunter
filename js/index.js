@@ -1,3 +1,4 @@
+/* initial error handler */
 document.getElementById('error').style.display = 'none'
 const main = document.getElementById('main');
 const searchButton = () => {
@@ -5,7 +6,7 @@ const searchButton = () => {
     const errorMessege = document.getElementById('error');
     inputText = input.value;
     input.value = '';
-
+    /* Error handler */
     if (parseFloat(inputText) < 0) {
 
         errorMessege.innerText = "Sorry not available ";
@@ -18,7 +19,7 @@ const searchButton = () => {
     else {
         main.innerHTML = '';
 
-
+        /* phone search url */
         const url = `https://openapi.programming-hero.com/api/phones?search=${inputText}`
 
         fetch(url)
@@ -107,6 +108,6 @@ const displayPhoneDetails = data => {
 
 
 
-    // onePhone.textContent = '';
+    // !!!....THE END....!!!
 
 }
