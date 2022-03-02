@@ -87,6 +87,7 @@ const displayPhoneDetails = data => {
 
     const onePhone = document.getElementById('one-phone');
     const div = document.createElement('div');
+    main.innerHTML = '';
     div.classList.add('card');
     div.innerHTML = `
 
