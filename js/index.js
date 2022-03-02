@@ -90,14 +90,21 @@ const displayPhoneDetails = data => {
     main.innerHTML = '';
     div.classList.add('card');
     div.innerHTML = `
-        <div class=" my-2 bg-dark">
+        <div class=" bg-dark">
       <img src="${data.image}" class="card-img-top w-50" alt="...">
       <div class="card-body">
-        <h5 class="card-title">${data.name}</h5>
-        <p class="card-text">${data.releaseDate}</p>
-        <p class="card-title">${data.brand}</p>
+        <h5 class="card-title">Phone-name: ${data.name}</h5>
+        <p class="card-title">Brand: ${data.brand}</p>
+        <p class="card-text">Relase: ${data.releaseDate}</p>
+        <p class="card-text">Slug: ${data.slug}</p>        
+        <p class="card-text">Storage: ${data.mainFeatures.storage}</p>        
+        <p class="card-text">Chipset: ${data.mainFeatures.chipSet}</p>        
+        <p class="card-text">Display: ${data.mainFeatures.displaySize}</p>
+        <p class="card-text">Sensor: ${data.mainFeatures.sensors}</p>
+       
+        
         <p>${rate()}</p>
-        <a href="${data.chipSet}" class="btn btn-primary">Go somewhere</a>
+        <a href="https://www.applegadgetsbd.com/" class="btn btn-danger">Buy Now</a>
       </div>
       </div>
 
