@@ -90,14 +90,15 @@ const displayPhoneDetails = data => {
     main.innerHTML = '';
     div.classList.add('card');
     div.innerHTML = `
-
-      <img src="${data.image}" class="card-img-top" alt="...">
+        <div class=" my-2 bg-dark">
+      <img src="${data.image}" class="card-img-top w-50" alt="...">
       <div class="card-body">
         <h5 class="card-title">${data.name}</h5>
         <p class="card-text">${data.releaseDate}</p>
         <p class="card-title">${data.brand}</p>
         <p>${rate()}</p>
         <a href="${data.chipSet}" class="btn btn-primary">Go somewhere</a>
+      </div>
       </div>
 
 
